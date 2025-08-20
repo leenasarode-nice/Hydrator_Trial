@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.nice.routing:findmatch-avro-serde:1.0.6" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.nice.routing" artifactId="findmatch-avro-serde" version="1.0.6" baseVersion="1.0.6" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nice.routing/findmatch-avro-serde/1.0.6/b73332d9e76f59db0521261477c84901d0126550/findmatch-avro-serde-1.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

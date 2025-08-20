@@ -1,0 +1,100 @@
+name: Automation Suite Run on Push
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: 'Environment'
+        required: true
+        default: Dev
+        options:
+          - Dev
+          - Test
+          - Staging
+          - Perf
+
+env:
+  BUID: "101"
+  TENANT_GUID: "11ED121F-45DC-1210-AC0B-0242AC110005"
+
+
+#  schedule:
+#    - cron: '0 0 * * *' #Will run as per UTC time
+permissions:
+  # These permissions are required by https://github.com/aws-actions/configure-aws-credentials
+  id-token: write
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, do]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Environment String & AWS Account Id
+        id: extract_env
+        run: |
+          case "${{ github.event.inputs.environment }}" in
+            Dev)
+              echo "::set-output name=env_string::do"
+              echo "::set-output name=env_account_id_string::300813158921"
+              ;;
+            Test)
+              echo "::set-output name=env_string::to"
+              echo "::set-output name=env_account_id_string::265671366761"
+              ;;
+            Staging)
+              echo "::set-output name=env_string::so"
+              echo "::set-output name=env_account_id_string::545209810301"
+              ;;
+            Perf)
+              echo "::set-output name=env_string::pfor"
+              echo "::set-output name=env_account_id_string::150598861634"
+              ;;
+          esac
+
+      - name: Install AWS CLI
+        run: |
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4.1.0
+        with:
+          role-to-assume: ${{ secrets.AWS_CODE_ARTIFACT_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_CODE_ARTIFACT_REGION }} # Region is us-west-2
+
+      - name: Setup Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: CodeArtifact Auth Token
+        run: |
+          export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain ${{ secrets.AWS_CODE_ARTIFACT_DOMAIN }} --domain-owner ${{ secrets.AWS_CODE_ARTIFACT_DOMAIN_OWNER }} --query authorizationToken --output text`
+          echo "codeartifactToken=$CODEARTIFACT_AUTH_TOKEN" > gradle.properties
+
+      - name: Make Gradle executable
+        run: chmod +x ./gradlew
+
+      - name: Configure AWS Credentials for Livevox Integration Automation Pipeline
+        uses: aws-actions/configure-aws-credentials@v4.1.0
+        with:
+          role-to-assume: arn:aws:iam::${{ steps.extract_env.outputs.env_account_id_string }}:role/ServiceAccess-outbound-livevox-integration-test-automation
+          aws-region: us-west-2
+
+      - name: Gradle Build and Test
+        run: ./gradlew clean build test
+
+      - name: Archive test results
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: test-results
+          path: test-output/ExtentReport/ # Update with the actual path to your test output directory

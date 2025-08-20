@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.testng:testng:7.7.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.testng" artifactId="testng" version="7.7.0" baseVersion="7.7.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.7.0/5298a6662b94d9ee438b95a2d44ea3ac6ce2cb8e/testng-7.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

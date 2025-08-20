@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.nice.outbound:outbound-protobuf:0.37.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.nice.outbound" artifactId="outbound-protobuf" version="0.37.0" baseVersion="0.37.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nice.outbound/outbound-protobuf/0.37.0/ab7535ecabf0be639bbdb539e6ebd66778e46494/outbound-protobuf-0.37.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.wire:wire-runtime-jvm:4.4.3" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.squareup.wire" artifactId="wire-runtime-jvm" version="4.4.3" baseVersion="4.4.3" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.wire/wire-runtime-jvm/4.4.3/aac32d182d6d0648bee4926b2d6747b595055e70/wire-runtime-jvm-4.4.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

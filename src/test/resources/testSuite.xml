@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="cxone-orch-agent-skill-minimal-cache-hydrator-automation" parallel="classes" thread-count="4">
+  <listeners>
+    <listener
+      class-name="hydrator.kafka.topic.automationsuite.setup.reports.ExtentReportListener"/>
+  </listeners>
+  <parameter name="KAFKA_BOOTSTRAP_SERVERS"
+    value="b-2-public.sharedmsk01uswest2.e6bxl0.c6.kafka.us-west-2.amazonaws.com:9198,b-1-public.sharedmsk01uswest2.e6bxl0.c6.kafka.us-west-2.amazonaws.com:9198,b-3-public.sharedmsk01uswest2.e6bxl0.c6.kafka.us-west-2.amazonaws.com:9198"/>
+  <parameter name="KAFKA_SSL" value="true"/>
+  <parameter name="ENV" value="dev"/>
+  <parameter name="CLUSTER_ID" value="do15"/>
+  <test name="Test">
+    <classes>
+      <class name="hydrator.kafka.topic.automationsuite.tests.TestAgentSkillMinimalCacheHydrator"/>
+    </classes>
+  </test>
+</suite>

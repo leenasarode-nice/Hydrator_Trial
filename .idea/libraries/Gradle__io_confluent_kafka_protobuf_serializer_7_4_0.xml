@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.confluent:kafka-protobuf-serializer:7.4.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.confluent" artifactId="kafka-protobuf-serializer" version="7.4.0" baseVersion="7.4.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.confluent/kafka-protobuf-serializer/7.4.0/e8476812fd5d125309e45ab430ef4833c4970dc9/kafka-protobuf-serializer-7.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

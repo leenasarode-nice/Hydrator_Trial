@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.kafka:kafka-streams:7.4.0-ccs" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.apache.kafka" artifactId="kafka-streams" version="7.4.0-ccs" baseVersion="7.4.0-ccs" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-streams/7.4.0-ccs/9327730a8de61d7cdf6fa167fa418c9e4cd807de/kafka-streams-7.4.0-ccs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

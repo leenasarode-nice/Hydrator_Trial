@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.nice:findmatch-conversion:0.1.0-alpha" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.nice" artifactId="findmatch-conversion" version="0.1.0-alpha" baseVersion="0.1.0-alpha" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nice/findmatch-conversion/0.1.0-alpha/3acde7c7b1aab5708c362a91f97049a92487e332/findmatch-conversion-0.1.0-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

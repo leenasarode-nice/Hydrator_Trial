@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.aventstack:extentreports:4.0.9" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.aventstack" artifactId="extentreports" version="4.0.9" baseVersion="4.0.9" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.aventstack/extentreports/4.0.9/272a055be574edaa8e609476077f56d3aa65b58a/extentreports-4.0.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: software.amazon.msk:aws-msk-iam-auth:1.1.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="software.amazon.msk" artifactId="aws-msk-iam-auth" version="1.1.5" baseVersion="1.1.5" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.msk/aws-msk-iam-auth/1.1.5/91f69513fbb9a98ebeb693a2cf9256cef98b7cc6/aws-msk-iam-auth-1.1.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

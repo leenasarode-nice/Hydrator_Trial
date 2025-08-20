@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: software.amazon.awssdk:third-party-jackson-dataformat-cbor:2.20.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="software.amazon.awssdk" artifactId="third-party-jackson-dataformat-cbor" version="2.20.5" baseVersion="2.20.5" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/third-party-jackson-dataformat-cbor/2.20.5/62bffc61b579b1c103b8f2453958bfdcdaac8dd/third-party-jackson-dataformat-cbor-2.20.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

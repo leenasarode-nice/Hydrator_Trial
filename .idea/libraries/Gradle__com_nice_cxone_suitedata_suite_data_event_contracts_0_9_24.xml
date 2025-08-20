@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.nice.cxone.suitedata:suite-data-event-contracts:0.9.24" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.nice.cxone.suitedata" artifactId="suite-data-event-contracts" version="0.9.24" baseVersion="0.9.24" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nice.cxone.suitedata/suite-data-event-contracts/0.9.24/dda1ac7e130bba4eeccc318eb1d37e6337318a4b/suite-data-event-contracts-0.9.24.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
