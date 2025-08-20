@@ -18,8 +18,7 @@ repositories {
         url = uri("https://nice-devops-369498121101.d.codeartifact.us-west-2.amazonaws.com/maven/cxone-maven/")
         credentials {
             username = "aws"
-            password = "eyJ2ZXIiOjEsImlzdSI6MTc1NTY3MDEyMywiZW5jIjoiQTEyOEdDTSIsInRhZyI6IlhyQnJHY2gzQ1Q0cHZtZXdTNTRMLWciLCJleHAiOjE3NTU3MTMzMjMsImFsZyI6IkExMjhHQ01LVyIsIml2IjoiR2UwV1Vtak1KWHVtMjEtVCJ9.EeNL3tZI4sPVUU-dTjVksQ.D54MCCBIHyfAqkdd.WKgzFNK3vjEC23bibBzGF2cvSzTVHoqICV5hP9_eJIpp7E6MwYotOkDoIqhtffPTTa-IQFi4Lil6LqbzAdjyhzwzpwIdzQOiAHuv6PCBW4SZqzepKZ5Kfdr9Pt-Yy21TObbn4azahXR2fPrvwuBP8UgNSp-CDyOd5eKQnyqrOGqo0K75HKfsDG7PgVAalO8Lj3cUpVjNrbeFC_7Vm0Pcd4eyLFO3rd8EC654m-Bv9AlCmAcBPRtkYN9aKRuMZiQfosJWwQFFaPTLJPxZwvJ0Gv59cK1TW-LxazebodoIZrgRElvhx-g6ZgxSAmHvxmpu29ELnwvJRl-FsTC7Wnbvhj5szs9hkCeKVXPgvipn12a5-DD_gD1fsw-MA-l8iIBFCvE6PErvLKwVM6Yp3osm3giaEEuB6UhhqByJ5v84_xJOY6__oRgYBtpKQTQnTWgN6SIJPcRHUCjeJdFX1-zU1l_eOWJYzBhX6Br81D7rTU_xrwZheFBPFW7ZwzOl8RCx6BNrTZPEW4mitac5GUer53aX7G_QOmPmT-bhx-R2E65JSE0RYVEEbUzRBWsKn0D1TamKR7QOVC1GYTg7IixVS4YZgOccFmeLfnvJZLI-neykvkJxE8V7bLApySDUutxz2PxmeCOQKqxFNnosGJHvSnlHCs8TWDahIsgW5UtPBywu1ogWPkl6tLGieKThxQUh7rguMriXKTh2tWKlx7DK3D_XhKlPCLjBpvxOLxe6EfNKiHHktm-gxagjZ-sfa-0kI49rmWsk9sRrpOOa5QZ9q2uL5Okysc9S5oSWY1_PDu0VJA64PEgjIC2LUYxkAeAZB26cwvjdgixXxRCVJa02NTfGuQ8OzOytdLYMZMtrqAe0dv9p2AtRNCE-ZHq84EQ0OPqKmi_hYy4vMDP8KPew0Zs6k9CckfBi0EOEzAu0XM6ZsbTGsymbLunDBUZe2Y32KqIteEKr8RhqN9Tq8INMu0xp9RAq29OSa9HY2U5tdIemaFVfGLCchjCoWUW5NBT2f_M-iFA7Y4Q9zD0Ud-ZC3socbmTbIZh7qLxsF_6EtwrnISv8w7xFhH5Bxsp-zPLsUWU8rj7M0Lbcbvzr8efDqK-j3lFcGAeI3XDmRiNcAF3BUNIWc3_ewCx4kqwbum7J7o4HWIezXYZEnkt6wlkU0dvrKAcgpizQEzkycVM22c4GVP7Im1uVKyDG5STY3N81xz04Qxz4bsmnblMnpMTxtY6M5D3dLJeI9XlUiM5Ac035b3gIWyvuLrx-YA.0VZRZ6MBplyfJTNV4HuWoA"
-//                project.properties["codeartifactToken"].toString()
+            password = project.properties["codeartifactToken"].toString()
         }
     }
 }
