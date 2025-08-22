@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cxone-orch-agent-skill-minimal-cache-hydrator-automation.iml" filepath="$PROJECT_DIR$/.idea/cxone-orch-agent-skill-minimal-cache-hydrator-automation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cxone-orch-agent-skill-minimal-cache-hydrator-automation.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cxone-orch-agent-skill-minimal-cache-hydrator-automation.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cxone-orch-agent-skill-minimal-cache-hydrator-automation.test.iml" filepath="$PROJECT_DIR$/.idea/modules/cxone-orch-agent-skill-minimal-cache-hydrator-automation.test.iml" />
     </modules>

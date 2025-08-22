@@ -1,18 +1,8 @@
-name: Manual Automation Suite Runner
+name: Automation Run on Code Push
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        type: choice
-        description: 'Environment'
-        required: true
-        default: Dev
-        options:
-          - Dev
-          - Test
-          - Staging
-          - Perf
+  push:
+    branches: [ master ]
 
 env:
   BUID: "101"
@@ -28,33 +18,11 @@ permissions:
 jobs:
   build:
 
-    runs-on: [self-hosted, do]
+    runs-on: [ self-hosted, do ]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Set Environment String & AWS Account Id
-        id: extract_env
-        run: |
-          case "${{ github.event.inputs.environment }}" in
-            Dev)
-              echo "::set-output name=env_string::do"
-              echo "::set-output name=env_account_id_string::300813158921"
-              ;;
-            Test)
-              echo "::set-output name=env_string::to"
-              echo "::set-output name=env_account_id_string::265671366761"
-              ;;
-            Staging)
-              echo "::set-output name=env_string::so"
-              echo "::set-output name=env_account_id_string::545209810301"
-              ;;
-            Perf)
-              echo "::set-output name=env_string::pfor"
-              echo "::set-output name=env_account_id_string::150598861634"
-              ;;
-          esac
 
       - name: Install AWS CLI
         run: |
@@ -63,7 +31,7 @@ jobs:
           sudo ./aws/install
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4.1.0
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ secrets.AWS_CODE_ARTIFACT_ROLE_ARN }}
           aws-region: ${{ secrets.AWS_CODE_ARTIFACT_REGION }} # Region is us-west-2
@@ -84,9 +52,9 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Configure AWS Credentials for Livevox Integration Automation Pipeline
-        uses: aws-actions/configure-aws-credentials@v4.1.0
+        uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::${{ steps.extract_env.outputs.env_account_id_string }}:role/ServiceAccess-outbound-livevox-integration-test-automation
+          role-to-assume: arn:aws:iam::300813158921:role/ServiceAccess-outbound-livevox-integration-test-automation
           aws-region: us-west-2
 
       - name: Gradle Build and Test

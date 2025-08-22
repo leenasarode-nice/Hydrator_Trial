@@ -47,10 +47,6 @@ public class TestAgentSkillMinimalCacheHydrator extends TestBaseClass {
         });
 
         assertEquals(count, 1, "Record is not populated");
-
-        System.out.println("---> " + initialMessage);
-        System.out.println();
-        System.out.println("1st Test case is passed");
     }
 
     /**
@@ -85,7 +81,6 @@ public class TestAgentSkillMinimalCacheHydrator extends TestBaseClass {
         AgentSkills dbData = dbRecords.get(0);
 
         assertEquals(kafkaData, dbData, "Kafka data does not match DB record");
-
     }
 
     /**
@@ -413,7 +408,6 @@ public class TestAgentSkillMinimalCacheHydrator extends TestBaseClass {
 //        assertEquals(count, 1, "Entire entry has been removed from the table");
 
         System.out.println(initialMessage);
-
     }
 
 
