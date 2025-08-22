@@ -79,7 +79,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
-          role-to-assume: arn:aws:iam::736763050260:user/Balabhau.BhargavramYeodekar
+          role-to-assume: arn:aws:iam::300813158921:role/GroupAccess-Developers-Orchestration
           aws-region: us-west-2
 
       - name: Setup Java JDK 17
