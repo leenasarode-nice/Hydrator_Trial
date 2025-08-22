@@ -65,8 +65,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
-          role-to-assume: ${{ secrets.AWS_CODE_ARTIFACT_ROLE_ARN }}
-          aws-region: ${{ secrets.AWS_CODE_ARTIFACT_REGION }} # Region is us-west-2
+          role-to-assume: arn:aws:account::300813158921:account
+          aws-region: us-west-2
 
       - name: Setup Java JDK 17
         uses: actions/setup-java@v4
