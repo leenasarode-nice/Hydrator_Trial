@@ -62,17 +62,18 @@ jobs:
 #          unzip awscliv2.zip
 #          sudo ./aws/install
 
-      - name: Remove existing AWS CLI
+      - name: Remove preinstalled AWS CLI
         run: |
           sudo rm -rf /usr/local/aws-cli
+          sudo rm -rf /usr/local/aws-cli-2
           sudo rm -f /usr/local/bin/aws
           sudo rm -f /usr/local/bin/aws_completer
 
-      - name: Install AWS CLI v2 (fresh)
+      - name: Install AWS CLI v2 fresh
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip -q awscliv2.zip
-          sudo ./aws/install --update --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli-2
+          sudo ./aws/install --install-dir /usr/local/aws-cli-2 --bin-dir /usr/local/bin
           aws --version
 
       - name: Configure AWS Credentials
