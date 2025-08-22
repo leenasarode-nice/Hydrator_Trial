@@ -28,7 +28,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: [self-hosted, do]
+    runs-on: [self-hosted, hyd]
 
     steps:
       - name: Checkout
